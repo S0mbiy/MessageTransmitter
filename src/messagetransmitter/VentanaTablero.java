@@ -11,10 +11,11 @@ import javax.swing.JFrame;
 public class VentanaTablero extends JFrame {
 
     public VentanaTablero() {
-        super("Damas Inglesas");
+        super("Message Transmitter");
         final JFXPanel fxPanel = new JFXPanel();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
+        this.setLocationRelativeTo(null);
         this.add(new Panel(this));
         this.pack();
         this.setVisible(true);
@@ -23,7 +24,6 @@ public class VentanaTablero extends JFrame {
     @SuppressWarnings("unused")
     public static void main(String[] args) {
         VentanaTablero ven = new VentanaTablero();
-        ven.Play();
     }
 
     private static String hexConv(String hex) {
@@ -35,8 +35,7 @@ public class VentanaTablero extends JFrame {
         return str;
     }
 
-    private void Play() {
-        String path = "C:\\Users\\Sergio Alvarado\\Documents\\Tec\\Videojuegos\\SourceressAcademy (2)\\Assets\\Audio\\backMusicSound.mp3";
+    private void Play(String path) {
         Media hit = new Media(new File(path).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(hit);
         mediaPlayer.play();
