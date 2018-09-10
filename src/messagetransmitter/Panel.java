@@ -20,7 +20,7 @@ public class Panel extends JPanel{
 		this.win=win;
 		this.setLayout(new GridBagLayout());
 		this.setPreferredSize(new Dimension(750, 750));
-		rst = new JButton("Reiniciar");
+		rst = new JButton("Reset");
 		rst.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				
