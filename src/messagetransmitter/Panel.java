@@ -37,6 +37,7 @@ public class Panel extends JPanel {
             btnCtrl;
     private JTextField text;
     private VentanaTablero win;
+    private boolean playing = false;
 
     public Panel(VentanaTablero win) {
         super();
@@ -66,7 +67,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("0");
                 text.setText(text.getText() + "0");
-                //Play("0.wav");
+                Play("0.wav");
             }
         });
 
@@ -193,6 +194,7 @@ public class Panel extends JPanel {
         btnCtrl.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("Start/Done");
+                Play("Inicio.wav");
                 text.setText("");
             }
         });
@@ -234,22 +236,26 @@ public class Panel extends JPanel {
         c.gridwidth = 2;
         c.ipady = 20;
         this.add(btnCtrl, c);
-        
+
         c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 40;      
+        c.ipady = 40;
         c.weightx = 0.0;
         c.gridwidth = 6;
         c.gridy = 0;
-        c.gridx=0;
+        c.gridx = 0;
         this.text = new JTextField();
         this.text.setEditable(false);
-        this.add(this.text,c);
+        this.add(this.text, c);
     }
 
     private void Play(String path) {
         Media hit = new Media(new File(path).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(hit);
+        playing = true;
         mediaPlayer.play();
-    }
+        mediaPlayer.setOnEndOfMedia(() -> {
+            playing = false;
+        });
 
+    }
 }
