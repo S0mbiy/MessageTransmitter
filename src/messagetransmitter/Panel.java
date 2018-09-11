@@ -66,6 +66,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("0");
                 text.setText(text.getText() + "0");
+                //Play("0.wav");
             }
         });
 
@@ -73,6 +74,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("1");
                 text.setText(text.getText() + "1");
+                Play("1.wav");
             }
         });
 
@@ -80,6 +82,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("2");
                 text.setText(text.getText() + "2");
+                Play("2.wav");
             }
         });
 
@@ -87,6 +90,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("3");
                 text.setText(text.getText() + "3");
+                Play("3.wav");
             }
         });
 
@@ -94,6 +98,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("4");
                 text.setText(text.getText() + "4");
+                Play("4.wav");
             }
         });
 
@@ -101,6 +106,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("5");
                 text.setText(text.getText() + "5");
+                Play("5.wav");
             }
         });
 
@@ -108,6 +114,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("6");
                 text.setText(text.getText() + "6");
+                Play("6.wav");
             }
         });
 
@@ -115,6 +122,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("7");
                 text.setText(text.getText() + "7");
+                Play("7.wav");
             }
         });
 
@@ -122,6 +130,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("8");
                 text.setText(text.getText() + "8");
+                Play("8.wav");
             }
         });
 
@@ -129,6 +138,7 @@ public class Panel extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("9");
                 text.setText(text.getText() + "9");
+                Play("9.wav");
             }
         });
 
